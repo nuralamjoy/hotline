@@ -8,6 +8,8 @@ const numbers = document.getElementsByClassName("num");
 const callBtns = document.getElementsByClassName("call-btn");
 const serviceTitle = document.getElementsByClassName("title-bng");
 const historyItems = document.querySelector(".history-items");
+const toggleBtn = document.getElementById("toggleSidebar");
+const sidebar = document.getElementById("sidebar");
 
 let heart = 0,
   copy = 0,
@@ -45,7 +47,6 @@ for (let i = 0; i < copyBtns.length; i++) {
     copyVal.innerText = copy;
     const text = numbers[i].innerText;
     navigator.clipboard.writeText(text);
-    alert("Copied: " + text);
   });
 }
 
@@ -78,4 +79,8 @@ function addHistory(service, number, date) {
 
 clearBtn.addEventListener("click", () => {
   historyItems.innerHTML = "";
+});
+
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("hidden");
 });

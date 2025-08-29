@@ -14,7 +14,7 @@
 
 <body>
   <section class="nav-bar container">
-    <nav class="h-[100px] flex justify-between items-center">
+    <nav class="h-[100px] my-5 sm:my-0 flex flex-col sm:flex-row  justify-between items-center">
       <div class="nav-logo flex">
         <img class="logo-img w-[50px] h-[50px] mr-2" src="assets/logo.png" alt="" />
         <h1 class="logo-name text-[#006747] font-bold">
@@ -52,8 +52,11 @@
   </section>
 
   <section class="main-content bg-[#F5FFF6]">
-    <div class="grid grid-cols-4 gap-4 container py-5">
-      <div class="col-span-3 grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-4  gap-4 container py-5">
+      <button id="toggleSidebar" class="md:hidden bg-[#00a63e] text-white px-4 py-2 rounded mb-4">
+        History
+      </button>
+      <div class="col-span-1 md:col-span-3 order-2 md:order-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="card bg-white shadow p-[32px] rounded-[12px]">
           <div class="card-content">
             <div class="card-up flex justify-between items-center mb-3">
@@ -174,7 +177,7 @@
             </div>
             <div class="card-text">
               <p class="title-bng text-[24px] font-bold text-[#111]">
-                Women & Child 
+                Women & Child
               </p>
               <p class="title-eng text-[18px] text-[#5c5c5c]">
                 Women & Child Helpline
@@ -308,7 +311,7 @@
         </div>
       </div>
 
-      <div class="col-span-1 bg-green-100 p-4 rounded shadow">
+      <div id="sidebar" class="col-span-1 order-1 md:order-2 bg-green-100 p-4 rounded shadow hidden md:block">
         <div class="history-head flex justify-between mb-5">
           <div class="history-title">
             <i class="fa-regular fa-clock text-[#5c5c5c] text-[20px] mr-2"></i>
@@ -325,6 +328,7 @@
         </div>
         <div class="history-items"></div>
       </div>
+    </div>
     </div>
   </section>
 
