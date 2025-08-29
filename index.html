@@ -14,19 +14,23 @@
 
 <body>
   <section class="nav-bar container">
-    <nav>
-      <div class="nav-logo">
-        <img class="logo-img" src="assets/logo.png" alt="" />
-        <h1 class="logo-name">Emergency Service</h1>
+    <nav class="h-[100px] flex justify-between items-center">
+      <div class="nav-logo flex">
+        <img class="logo-img w-[50px] h-[50px] mr-2" src="assets/logo.png" alt="" />
+        <h1 class="logo-name text-[#006747] font-bold">Emergency <br> Service</h1>
       </div>
-      <div class="nav-btn">
-        <button id="heart-btn">
-          <span id="heart-val">0</span><img src="assets/heart.png" alt="" />
-        </button>
-        <button id="coin-btn">
-          <span id="coin-val">100</span><img src="assets/coin.png" alt="" />
-        </button>
-        <button id="copy-btn"><span id="coin-val">0</span>copy</button>
+      <div class="nav-right flex gap-4">
+        <div id="heart-btn" class="flex items-center gap-2 bg-[#F5FFF6] px-5 py-1 rounded-[25px]">
+          <span id="heart-val" >0</span>
+          <img src="assets/heart.png" alt="" class="w-[30px] h-[30px] inline-block" />
+        </div>
+        <div id="coin-btn" class="flex items-center gap-2 bg-[#F5FFF6] px-5 py-1 rounded-[25px]">
+          <span id="coin-val">100</span>
+          <img src="assets/coin.png" alt="" class="w-[24px] h-[24px] inline-block" />
+        </div>
+        <div id="copy-btn" class="flex items-center text-white bg-[#00a63e] px-5 py-1 rounded-[25px]">
+          <span id="coin-val" class="text-white mr-2">0</span>copy
+        </div>
       </div>
     </nav>
   </section>
@@ -228,7 +232,20 @@
         </div>
       </div>
 
-      <div class="col-span-1 bg-green-100 p-4 rounded shadow"></div>
+      <div class="col-span-1 bg-green-100 p-4 rounded shadow">
+        <div class="history-head flex justify-between">
+          <div class="history-title">
+            <i class="fa-regular fa-clock text-[#5c5c5c] text-[20px] mr-2"></i>
+            <h3 class="title inline-block text-[20px] font-bold ">Call History</h3>
+          </div>
+          <div class="clear-btn">
+            <button type="button" class="text-white text-[16px] bg-[#00a63e] px-5 py-1 rounded-[25px]">Clear</button>
+          </div>
+        </div>
+        <div class="history-items">
+
+        </div>
+      </div>
     </div>
   </section>
 
