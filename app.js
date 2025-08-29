@@ -27,7 +27,10 @@ for (let i = 0; i < cardHearts.length; i++) {
 
 for (let i = 0; i < callBtns.length; i++) {
   callBtns[i].addEventListener("click", function () {
-    if (coin >= 2) {
+    if (coin >= 20) {
+      let alrtText = serviceTitle[i].innerText;
+      let alrtNum = numbers[i].innerText;
+      alert("Calling " + alrtText + "\n" + alrtNum);
       coin -= 20;
       coinVal.innerText = coin;
       addHistory(
